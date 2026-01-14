@@ -75,6 +75,8 @@ while not end_of_game:
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
             display[i] = guess
+
+
     # todo - 2 : 추측한 알파벳이 chosen_word에 없으면 lives를 1 감소시키세요.
     #  lives가 0이 되면 "모든 기회를 잃었습니다."를 출력하고 게임을 끝내세요.
 
@@ -101,5 +103,10 @@ while not end_of_game:
     # 다 맞췄다면 "정답입니다 !! ✔️" 를 출력하시오. -> display에 "_"가 없다.
     if "_" not in display:
         print("정답입니다 !! ✔️")
-        end_of_game = True
-        print(" ".join(display))
+        end_of_game = True          # 얘만 되고 break 쓰면 안되겠네요.
+
+
+# 정답을 맞췄을 때 어느 부분을 맞췄는지 출력되지 않음.
+# stages 리스트 내에 있는 그림이 출력되지 않음.
+    print(" ".join(display))
+    print(stages[lives])
