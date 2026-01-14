@@ -36,6 +36,14 @@ print(guess)
 # for i in "apple":
 #     print(i)
 
+# for letter in "apple":          # 문자열(string)에서 첫번째 문자부터 하나씩 letter에 대입하여
+#     print(letter)               # 하나씩 출력 / 즉, 첫 번째 대입에서는 apple의 a가 letter에 대입 letter = a
+
+for letter in chosen_word:
+    if letter == guess:     # 조건식 : true / false로 결론이 날 수 있는 표현식
+        print("정답")
+    else:
+        print("오답")
 # 만약 chosen_word가 banana고 guess가 b 라면
 '''
 정답
@@ -51,6 +59,7 @@ print(guess)
 정답
 오답
 오답
+19:05에 풀이 시작합니다
 '''
 
 
