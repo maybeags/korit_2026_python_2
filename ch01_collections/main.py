@@ -107,21 +107,21 @@ https://github.com/maybeags/korit_2026_python_2
 입력 받은 숫자는 [5, 10, 15, 20, 25, 30]입니다.
 입력 받은 숫자들 중 짝수는 [10, 20, 30]입니다.'''
 # 빈 list 선언
-numbers = []
-numbers_even = []
-num = int(input("몇 개의 숫자를 입력할까요? >>> "))
-# num만큼 반복문을 돌아서 list에 추가해줘야겠네요.
-for i in range(num):
-    number = int(input(f"{i+1}번째 숫자를 입력하세요 >>> "))
-    numbers.append(number)          # 입력 받자마자 전부 다 numbers 리스트에 저장
-    if number % 2 == 0:             # 입력 받은 숫자가 짝수라면 실행되는 조건문
-        numbers_even.append(number) # 그때 numbers_even에 저장
-# for i in numbers:
-#     if i % 2 == 0:
-#         numbers_even.append(i)
-
-print(f"입력 받은 숫자는 {numbers}입니다.")
-print(f"입력 받은 숫자들 중 짝수는 {numbers_even}입니다.")
+# numbers = []
+# numbers_even = []
+# num = int(input("몇 개의 숫자를 입력할까요? >>> "))
+# # num만큼 반복문을 돌아서 list에 추가해줘야겠네요.
+# for i in range(num):
+#     number = int(input(f"{i+1}번째 숫자를 입력하세요 >>> "))
+#     numbers.append(number)          # 입력 받자마자 전부 다 numbers 리스트에 저장
+#     if number % 2 == 0:             # 입력 받은 숫자가 짝수라면 실행되는 조건문
+#         numbers_even.append(number) # 그때 numbers_even에 저장
+# # for i in numbers:
+# #     if i % 2 == 0:
+# #         numbers_even.append(i)
+#
+# print(f"입력 받은 숫자는 {numbers}입니다.")
+# print(f"입력 받은 숫자들 중 짝수는 {numbers_even}입니다.")
 # 입력 받은 숫자들 전체 출력 및 짝수만 출력해야합니다.
 
 '''
@@ -139,3 +139,17 @@ print(add_numbers2(last_num))    # call4유형
 숫자 몇 까지 입력하시겠습니까? >>> 10
 [1,2,3,4,5,6,7,8,9,10]
 '''
+# 함수 정의 부분
+def add_numbers(n):
+    # 1. 반복문을 사용 (n만큼 반복되어야 합니다)
+    # 2. 반복문 내부에서 .append() 메서드가 실행되어야 함.
+    temp = []
+    for i in range(n):
+        temp.append(i+1)
+    print(temp)
+
+# 함수 호출
+last_num = int(input("숫자 몇 까지 입력하시겠습니까? >>> "))
+add_numbers(last_num)     # 결과값 : [1,2,3,4,5,6,7,8,9,10]
+
+# ch02_classes 패키지 생성 -> main.py
