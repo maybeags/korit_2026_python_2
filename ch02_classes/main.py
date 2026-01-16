@@ -167,7 +167,24 @@ book2 = Book()
 책 제목 : 어린왕자
 책 저자 : 생텍쥐페리    
 '''
+# 클래스 정의
+class Book:
+    def set_info(self, title, author):
+        self.title = title
+        self.author = author
 
+    def display_info(self):
+        return f"책 제목 : {self.title}\n책 저자 : {self.author}"
+
+# 객체 생성
+book1 = Book()
+book2 = Book()
+
+book1.set_info(author="민경태", title="파이썬")
+book2.set_info("어린왕자", "생텍쥐페리")
+
+print(book1.display_info())
+print(book2.display_info())
 
 
 
