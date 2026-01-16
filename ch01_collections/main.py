@@ -106,3 +106,36 @@ https://github.com/maybeags/korit_2026_python_2
 5번째 숫자를 입력하세요 >>> 30
 입력 받은 숫자는 [5, 10, 15, 20, 25, 30]입니다.
 입력 받은 숫자들 중 짝수는 [10, 20, 30]입니다.'''
+# 빈 list 선언
+numbers = []
+numbers_even = []
+num = int(input("몇 개의 숫자를 입력할까요? >>> "))
+# num만큼 반복문을 돌아서 list에 추가해줘야겠네요.
+for i in range(num):
+    number = int(input(f"{i+1}번째 숫자를 입력하세요 >>> "))
+    numbers.append(number)          # 입력 받자마자 전부 다 numbers 리스트에 저장
+    if number % 2 == 0:             # 입력 받은 숫자가 짝수라면 실행되는 조건문
+        numbers_even.append(number) # 그때 numbers_even에 저장
+# for i in numbers:
+#     if i % 2 == 0:
+#         numbers_even.append(i)
+
+print(f"입력 받은 숫자는 {numbers}입니다.")
+print(f"입력 받은 숫자들 중 짝수는 {numbers_even}입니다.")
+# 입력 받은 숫자들 전체 출력 및 짝수만 출력해야합니다.
+
+'''
+숫자를 입력한 횟수만큼 비어있는 list에 숫자를 추가하기
+문제 : 비있는 리스트 list01을 선언하고 그 안에 입력받은 횟수만큼 숫자를 추가하시오.
+
+함수 정의 : add_numbers()
+매개 변수 : 정수 n
+
+함수 호출
+add_numbers(last_num)           # call2유형
+print(add_numbers2(last_num))    # call4유형    
+
+실행 예
+숫자 몇 까지 입력하시겠습니까? >>> 10
+[1,2,3,4,5,6,7,8,9,10]
+'''
