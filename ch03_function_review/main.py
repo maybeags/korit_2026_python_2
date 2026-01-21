@@ -23,9 +23,66 @@ ex)
 
 실행 예
 
-윤년인지 확인하고 싶은 연도를 입력하세요 >>> 2200년
+윤년인지 확인하고 싶은 연도를 입력하세요 >>> 2200
 2200년은 윤년이 아닙니다.
 
-윤년인지 확인하고 싶은 연도를 입력하세요 >>> 2000년
+윤년인지 확인하고 싶은 연도를 입력하세요 >>> 2000
 2000년은 윤년입니다.
 '''
+# 윤년을 영어로 하면 leap_year
+
+
+# if year % 400 == 0:
+#     answer = "윤년입니다."
+# elif year % 100 == 0:
+#     answer = "윤년이 아닙니다."
+# elif year % 4 == 0:
+#     answer = "윤년입니다."
+# else :
+#     answer = "윤년이 아닙니다."
+
+def ask_leap_year():
+    year = int(input("윤년인지 확인하고 싶은 연도를 입력하세요 >>> "))
+    answer = "오류가 있습니다."
+    if year % 400 == 0 or ( year % 100 != 0 and year % 4 == 0):
+        answer= "윤년입니다."
+    else:
+        answer = "윤년이 아닙니다."
+
+    print(f"{year} 년은 {answer}")
+
+# ask_leap_year()
+# ask_leap_year()
+# ask_leap_year()
+#
+# for i in range(3):
+#     ask_leap_year()
+
+answer = "yes"
+while answer == "yes":
+    ask_leap_year()
+    answer = input("계속하시겠습니까?(yes / no) >>> ")
+
+print("프로그램이 종료되었습니다.")
+
+# 위의 코드를 ask_leap_year()라는 이름의 함수로 함수화 시키고 3 번 호출하시오.
+
+# if year % 4 == 0:
+#     print("윤년입니다.")
+# elif year % 100 == 0:
+#     print("윤년이 아닙니다.")
+# elif year % 400 == 0:
+#     print("윤년입니다.")
+# else:
+#     print("윤년이 아닙니다.")
+
+'''
+이상과 같이 작성하게 되면 100 이라고 입력했을 때 윤년이라고 뜨기 때문에 저희가 생각한 결과값과 다릅니다.
+컴퓨터는 순서대로 코드를 실행시킨다.
+
+-> 조건문을 작성할 때 주의할 점 :
+조건이 촘촘한 것부터 시작해서 더 큰 걸로 순서를 배열할 필요가 있다.
+
+
+'''
+
