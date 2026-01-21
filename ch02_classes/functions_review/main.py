@@ -232,11 +232,9 @@ def multiply(n):
         print(f"{n} x {i} = {n*i}")
 
 # main 부분에서 입력받았습니다.
-dan = int(input("몇 단을 입력하시겠습니까? >>>"))
+# dan = int(input("몇 단을 입력하시겠습니까? >>>"))
 
-multiply(dan)   # input 함수의 결과값을 int 함수를 통해 자료형을 str에서 int로 바꾸고, 이를 multiply의 argument로 사용한 함수형 프로그래밍
-
-
+multiply(3)   # input 함수의 결과값을 int 함수를 통해 자료형을 str에서 int로 바꾸고, 이를 multiply의 argument로 사용한 함수형 프로그래밍
 
 
 
