@@ -15,7 +15,7 @@ class MoneyMachine:
 
     def report(self):
         """현재 수익을 출력합니다."""
-        print(f"Money: {self.CURRENCY}{self.profit}")
+        print(f"수익: {self.CURRENCY}{self.profit}")
 
     def process_coins(self):
         """투입된 동전으로부터 계산된 총액을 반환합니다."""

@@ -24,7 +24,7 @@ class Menu:
         """이용 가능한 모든 메뉴 아이템의 이름을 반환합니다."""
         options = ""
         for item in self.menu:
-            options += f"{item.name}/"
+            options += f"{item.name} / "
         return options
 
     def find_drink(self, order_name):
