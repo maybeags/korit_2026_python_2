@@ -4,9 +4,9 @@ class MenuItem:
         self.name = name
         self.cost = cost
         self.ingredients = {
-            "water": water,
-            "milk": milk,
-            "coffee": coffee,
+            "물": water,
+            "우유": milk,
+            "커피": coffee,
         }
 
 
@@ -15,9 +15,11 @@ class Menu:
     def __init__(self):
         self.menu = [
             MenuItem(name="라떼", water=200, milk=150, coffee=24, cost=2.5),
-            MenuItem(name="espresso", water=50, milk=0, coffee=18, cost=1.5),
-            MenuItem(name="cappuccino", water=250, milk=50, coffee=24, cost=3),
+            MenuItem(name="에스프레소", water=50, milk=0, coffee=18, cost=1.5),
+            MenuItem(name="카푸치노", water=250, milk=50, coffee=24, cost=3),
             MenuItem(name="카라멜마키아토", water=200, milk=60, coffee=26, cost=4),
+            # keyword argument를 사용하지 않은 객체 생성
+            MenuItem('드립 커피', 70, 0, 20, 2),
         ]
 
     def get_items(self):
