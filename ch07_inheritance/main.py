@@ -38,6 +38,9 @@ class Person:                           # 슈퍼 클래스
     def eat(self, food):                # call2()유형의 매개변수 있고 return 타입 없는 메서드 정의
         print(f'{self.name}이(가) {food}을(를) 먹습니다.')
 
+    def drink(self, drink_name):
+        print(f'{self.name}이(가) {drink_name}을(를) 마십니다.')
+
 # 객체 생성
 person1 = Person(name='김일')         # keyword argument를 통한 객체 생성
 # 메서드 호출
@@ -52,10 +55,25 @@ class Student(Person):
     def study(self):                                    # 매개변수도 없고 return도 없는 call1() 유형으로 정의했습니다.
         print(f'{self.name}은(는) {self.school}에서 공부합니다.')
 
+    def drink(self, drink_name):
+        print(f'{self.school}에서', end=' ')
+        super().drink(drink_name)
+
 potter = Student(school='호그와트', name='해리포터')
 potter.study()          # 결과값 : 해리포터은(는) 호그와트에서 공부합니다.
 potter.eat('고구마')       # Student 클래스에는 없는 부모 클래스의 메서드인 eat()을 호출하는 것이 가능
+potter.drink('제로콜라')
+person1.drink('제로콜라')
+'''
+이상의 65번 라인 및 66 번 라인의 메서드 호출 결과를 확인해보면 동일한 메서드를 동일한 argument를 통해서 호출했음에도 불구하고, 객체가 어느 슈퍼클래스의 인스턴스냐 혹은 서브클래스의 인스턴스냐에 따라서 호출 결과가 다르다는 것을 확인할 수 있습니다.
 
+결과값 65 : 호그와트에서 해리포터이(가) 제로콜라을(를) 마십니다.
+결과값 66 : 김일이(가) 제로콜라을(를) 마십니다.
+
+즉 슈퍼 클래스의 method를 가공하여 서브 클래스에서는 다른 결과값을 낼 수 있도록 _재정의_ 했습니다. 이상과 같은 작업을 method overriding이라고 합니다.
+
+task.py
+'''
 '''
 3. 서브 클래스의 __init__()       : 언더스코어 두 개
 서브 클래스는 슈퍼 클래스가 없으면 존재할 수 없습니다. 그래서 서브 클래스의 생성자를 구현할 때는 '반드시 슈퍼 클래스의 생성자를 먼저 호출'하는 코드를 작성 해야만 합니다.
